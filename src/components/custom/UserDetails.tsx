@@ -1,12 +1,15 @@
-import useUsers from "@/hooks/userUsers";
+import userDetailsQueryOption from "@/queries/UserQuery";
+import { Loader } from "@chakra-ui/react";
+import { useQuery } from "@tanstack/react-query";
 
 const UserDetails = () => {
-  const { data, error, isLoading } = useUsers();
+  const { data, isFetching, isError } = useQuery(userDetailsQueryOption());
 
   return (
     <div>
-      {error && <p>There is no data for users api</p>}
-      {data.map((user) => (
+      {isError && <p>There is some error in users component</p>}
+      {isFetching && <Loader></Loader>}
+      {data?.map((user) => (
         <div key={user.id}>{user.name}</div>
       ))}
     </div>

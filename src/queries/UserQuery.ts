@@ -14,6 +14,7 @@ const fetchUserDetails = async (): Promise<User[]> => {
       signal: controller.signal,
     }
   );
+  console.log("users data fetching using react query");
   return users.data;
 };
 
