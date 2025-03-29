@@ -11,13 +11,13 @@ const App = () => {
       <Header></Header>
       <SimpleGrid columns={12}>
         <GridItem
-          colSpan={{ base: 12, sm: 4 }}
+          colSpan={{ base: 12, sm: 3 }}
           backgroundColor={"yellow.300"}
           p={5}
         >
           <UserDetails></UserDetails>
         </GridItem>
-        <GridItem colSpan={{ base: 12, sm: 8 }} px={10} py={5}>
+        <GridItem colSpan={{ base: 12, sm: 9 }} px={10} py={5}>
           {/* <Comments></Comments> */}
           <Posts></Posts>
         </GridItem>

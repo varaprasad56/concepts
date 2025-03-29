@@ -23,6 +23,6 @@ const useData = <T,>({ endpoint }: { endpoint: string }) => {
         setError("some issue with apiClient");
       });
   }, []);
-  return { isLoading, error, data };
+  return { isLoading, error, data, setData };
 };
 export default useData;
